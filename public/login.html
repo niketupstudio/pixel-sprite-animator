@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>访问 Pixel Sprite Animator</title>
+  <link rel="stylesheet" href="/login.css" />
+</head>
+<body>
+  <main class="access-panel">
+    <div class="brand"><span class="brand-mark">✦</span><span>Pixel Sprite Animator</span></div>
+    <h1>访问工作台</h1>
+    <form id="accessForm">
+      <label for="accessKey">访问码</label>
+      <input id="accessKey" name="accessKey" type="password" autocomplete="current-password" required autofocus />
+      <p id="accessError" role="alert" aria-live="polite"></p>
+      <button type="submit">进入工作台 <span aria-hidden="true">→</span></button>
+    </form>
+    <small>授权访问 · 浏览器本地导出 · Mac 编码可选</small>
+  </main>
+  <script type="module" src="/login.js"></script>
+</body>
+</html>

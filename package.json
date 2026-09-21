@@ -1,0 +1,24 @@
+{
+  "name": "pixel-sprite-animator",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server.mjs",
+    "dev:local": "PIXEL_SPRITE_PORT=4174 PIXEL_SPRITE_AUTH_DISABLED=1 node server.mjs",
+    "local:install": "node scripts/local-service.mjs install",
+    "local:status": "node scripts/local-service.mjs status",
+    "local:restart": "node scripts/local-service.mjs restart",
+    "local:open": "node scripts/local-service.mjs open",
+    "local:stop": "node scripts/local-service.mjs stop",
+    "test": "node --test tests/*.test.mjs",
+    "share": "node scripts/share.mjs",
+    "share:install": "node scripts/share-service.mjs install",
+    "share:restart": "node scripts/share-service.mjs restart",
+    "share:publish": "node scripts/share-publish.mjs",
+    "share:sync": "node scripts/share-publish.mjs",
+    "share:status": "node scripts/share-service.mjs status",
+    "share:invite": "node scripts/share-service.mjs invite",
+    "share:stop": "node scripts/share-service.mjs stop"
+  }
+}

@@ -1,0 +1,15 @@
+:root { color-scheme: dark; font-family: system-ui, -apple-system, sans-serif; }
+* { box-sizing: border-box; }
+body { min-height: 100vh; margin: 0; display: grid; place-items: center; background: #252831; color: #f5efe8; }
+.access-panel { width: min(400px, calc(100vw - 32px)); padding: 28px; border: 1px solid #715d60; background: #392f3a; box-shadow: 8px 8px 0 #171c24; }
+.brand { display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 700; }
+.brand-mark { display: grid; place-items: center; width: 30px; height: 30px; border: 2px solid #e3ad6c; color: #e3ad6c; }
+h1 { margin: 34px 0 24px; font-size: 24px; letter-spacing: 0; }
+label { display: block; margin-bottom: 8px; font-size: 13px; color: #d7cbd0; }
+input { width: 100%; height: 44px; padding: 0 12px; border: 1px solid #9b7c81; border-radius: 2px; background: #252831; color: #fff; font: inherit; outline: none; }
+input:focus { border-color: #e3ad6c; box-shadow: 0 0 0 2px #e3ad6c44; }
+#accessError { min-height: 20px; margin: 7px 0 10px; color: #ffada5; font-size: 12px; }
+button { width: 100%; height: 44px; display: flex; align-items: center; justify-content: space-between; padding: 0 14px; border: 1px solid #f0bf82; border-radius: 2px; background: #e1aa68; color: #25232a; font-family: inherit; font-size: 14px; font-weight: 700; cursor: pointer; }
+button:hover { background: #f1bf81; }
+button:disabled { cursor: wait; opacity: .7; }
+small { display: block; margin-top: 32px; color: #ada7af; font-size: 11px; }
