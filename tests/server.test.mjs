@@ -76,7 +76,7 @@ test('shared app protects every route and keeps export computation in the browse
   assert.match(appScript, /exportEntriesAt/);
   assert.match(appScript, /layerDisplayScale/);
   assert.match(appScript, /function selectedLayers\(\)/);
-  assert.match(appScript, /function exportLayerFrameCount\(layers\)/);
+  assert.match(appScript, /function exportLayerFrameCount\(layers/);
   assert.match(appScript, /strokeStyle = '#f4b765'/);
   assert.match(appScript, /previewOriginLock/);
   assert.match(appScript, /function motionWorldPoint\(t, layer\)/);
@@ -89,6 +89,10 @@ test('shared app protects every route and keeps export computation in the browse
   assert.match(appScript, /function groupSelectedFrames\(\)/);
   assert.match(appScript, /function ungroupSelectedFrames\(\)/);
   assert.match(browserHtml, /id="copySelectedFrames"/);
+  assert.match(browserHtml, /id="sequencePlayback"/);
+  assert.match(appScript, /function orderedAnimations\(\)/);
+  assert.match(appScript, /function reorderAnimations\(\)/);
+  assert.match(appScript, /sequenceEnabled/);
   assert.match(appScript, /function restartPreviewPlayback\(\)/);
   assert.match(appScript, /motionConfig\(\)\.loop === 'once'/);
   assert.equal((await fetch(`${base}/app.js`)).status, 401);

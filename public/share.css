@@ -216,6 +216,21 @@ body { min-width: 1280px; overflow-x: auto; }
 .workspace-action-strip .panel-title { flex: 0 0 auto; display: flex; align-items: center; gap: 10px; border: 0; padding: 0; }
 .workspace-action-strip .animation-list { display: flex; flex: 1 1 auto; min-width: 0; flex-direction: row; gap: 6px; overflow-x: auto; }
 .workspace-action-strip .animation-item { flex: 0 0 auto; min-width: 150px; }
+.workspace-action-strip .sequence-toggle { display: inline-flex; align-items: center; flex: 0 0 auto; gap: 5px; color: #e3b8ad; font-size: 10px; white-space: nowrap; }
+.workspace-action-strip .sequence-toggle input { position: absolute; opacity: 0; pointer-events: none; }
+.workspace-action-strip .sequence-toggle .toggle { width: 24px; height: 14px; border: 1px solid #765363; background: #241c2e; }
+.workspace-action-strip .sequence-toggle input:checked + .toggle { background: #39766f; border-color: #8ed8c4; box-shadow: inset 0 0 0 3px #241c2e; }
+.workspace-action-strip .animation-item { position: relative; transition: transform 120ms ease, margin 120ms ease, border-color 120ms ease; }
+.workspace-action-strip .animation-item.selected { border-color: #8ed8c4; box-shadow: inset 0 0 0 2px #8ed8c4, 2px 2px 0 #241a29; }
+.workspace-action-strip .animation-item-title { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.workspace-action-strip .animation-play-mode { width: 68px; min-width: 68px; height: 22px; border: 1px solid #765363; border-radius: 0; background: #241c2e; color: #fff0d0; font-size: 9px; }
+.workspace-action-strip .animation-item.drag-source { opacity: .55; transform: translateY(-2px); }
+.workspace-action-strip .animation-item.drop-before { margin-left: 14px; border-left: 3px solid #f4b765; }
+.workspace-action-strip .animation-item.drop-after { margin-right: 14px; border-right: 3px solid #f4b765; }
+.workspace-action-strip .animation-item.drop-before::before,
+.workspace-action-strip .animation-item.drop-after::after { content: '插入'; position: absolute; top: -16px; color: #f4b765; font: 9px ui-monospace, monospace; }
+.workspace-action-strip .animation-item.drop-before::before { left: -7px; }
+.workspace-action-strip .animation-item.drop-after::after { right: -7px; }
 .workspace-action-strip .source-reload { flex: 0 0 auto; min-height: 30px; }
 .editor-grid { grid-template-columns: minmax(380px, var(--editor-split, 38%)) 10px minmax(560px, 1fr); gap: 0; align-items: stretch; }
 .editor-grid > .sheet-panel { min-width: 0; }
